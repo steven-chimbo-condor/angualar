@@ -1,8 +1,9 @@
 export class cliente{
-    Nombre: string
-    Apellido: string
-    Cedula: string
-    Edad: string
-    Telefono: string
-    Direccion: string 
+    _id:null;
+    dni:string;
+    names:string;
+    email:string;
+    phone:string;
+    direccion:string;
+    genero:string;
 }

@@ -21,8 +21,6 @@ export class ChimboComponent implements OnInit {
   ReguistroUser(){
     this.Ruta.navigate(['UserRegistro'])
   }
-  Mostar(){
-    this.Ruta.navigate(['Table'])
-  }
+  
 
 }

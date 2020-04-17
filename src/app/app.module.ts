@@ -10,7 +10,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ChimboComponent } from './Prueba/chimbo/chimbo.component';
 import { RegistroLoginComponent } from './Prueba/registo-login/registro-login.component';
 import { UsuarioComponent } from './Prueba/usuario/usuario.component';
-import { TableComponent } from './Prueba/table/table.component';
+
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { TableComponent } from './Prueba/table/table.component';
     ChimboComponent,
     RegistroLoginComponent,
     UsuarioComponent,
-    TableComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -1,39 +1,63 @@
-<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
-	<link rel="stylesheet">    
-                <a class="nav-link">Formulario de registro de usuario</a>
-         
-            <div class="container">		
-                <form class="form__reg"  [formGroup]=' FormUsuario'  (ngSubmit)='CrearUsuario()'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col md-4">
+                <form [formGroup]="FormUsuario" (ngSubmit)="guardaryeliminar">
+                    <input  [(ngModel)]="Usuarios._id" style="display: none;" formControlName="_id" type="text" class="form-control" >
                     <div>
-                        <label for="Nombre" >Nombre :</label>
-                        <input type="text" [(ngModel)]='Usuarios.Nombre' formControlName='Nombre'class="form-control" >
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1">Apellido:</label>
-                        <input type="text" [(ngModel)]='Usuarios.Apellido' formControlName='Apellido'class="form-control">
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1">Cedula :</label>
-                        <input type="text" [(ngModel)]='Usuarios.Cedula' formControlName='Cedula'class="form-control">
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1">Edad :</label>
-                        <input type="text" [(ngModel)]='Usuarios.Edad' formControlName='Edad'class="form-control">
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1">Telefono:</label>
-                        <input type="text" [(ngModel)]='Usuarios.Telefono' formControlName='Telefono'class="form-control">
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1">Dirrección : </label>
-                        <input type="text" [(ngModel)]='Usuarios.Direccion' formControlName='Direccion'class="form-control">
-                    </div>
-                            <!-- agrego botones -->
-                    <div class="btn__form">
-                        <button class="btn__submit" class="btn btn-primary" style="margin-left: 30px ">registro</button>
-                        <button class="btn__reset"class="btn btn-primary" style="margin-left: 30px " >limpiar </button>
-                    </div>
-                </form>
+                    <p>Cedula: 
+                        <input  [(ngModel)]="Usuarios.dni" formControlName="dni" type="text" class="form-control" name="cedula"></p>
+                     <p>Nombres:
+                          <input [(ngModel)]="Usuarios.names" formControlName="names" type="text"class="form-control" name="nombres"></p>
+                     <p>Email:
+                          <input [(ngModel)]="Usuarios.email" formControlName="email" type="text"class="form-control" name="email"></p>
+                     <p>Telefono:
+                          <input [(ngModel)]="Usuarios.phone" formControlName="phone" type="number"class="form-control" name="telefono"></p>
+                     <p>Direccion:
+                          <input [(ngModel)]="Usuarios.direccion" formControlName="direccion" type="text" class="form-control"name="direccion"></p>
+                     <p>Genero: 
+                        <select class="form-control" [(ngModel)]="Usuarios.genero" formControlName="genero" >
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="CH">Chimbo</option>
+                        </select>
+                   </div>                   
+                      <p>
+                       <input type="submit"  class="form-control"value="Guardar">                 
+                     </p>
+                   </form>
             </div>
-    
+            <div class="col md-4">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Telefono</th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let persona of datospersona">
+                        <th scope="row">{{persona.names}}</th>
+                        <th scope="row">{{persona.dni}}</th>
+                        <th scope="row">{{persona.phone}}</th>
+                        <th><button class="form-control" (click)='editar()'>Editar</button></th>
+                        <th><button class="form-control" >Eliminar</button></th>
+                      </tr>                      
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
