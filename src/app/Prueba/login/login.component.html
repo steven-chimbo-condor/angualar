@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet">
+	
+
+</head>  
+<body>
+    <form class="formulario" [formGroup]=' FormLogin' (ngSubmit)='EnviarDatos()'>
+    
+    <h1>Login</h1>
+     <div class="contenedor">
+     
+     
+         
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text"  [(ngModel)]='Personas.Cedula' formControlName='Cedula' placeholder="Cedula" >
+         
+         </div>
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input type="password" [(ngModel)]='Personas.Contrasena' formControlName='Contrasena' placeholder="Contraseña">
+         
+         </div>
+         <input type="submit" value="Login" class="button">
+         <input type="submit" (click)="getLogin()" value="registro" class="button">
+     </div>
+    </form>
+</body>
+    
+</html>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

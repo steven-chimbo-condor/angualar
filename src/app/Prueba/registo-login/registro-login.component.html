@@ -1,0 +1,31 @@
+    <form class="formulario" [formGroup]='FormRegistroLogin' (ngSubmit)='CrearLogin()'>
+    
+    <h1>Login</h1>
+     <div class="contenedor">
+     
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <label for="exampleInputEmail1">Cedula</label>
+         <input type="text" [(ngModel)]='Personas.Cedula' formControlName='Cedula'class="form-control">
+         
+         </div>
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password"[(ngModel)]='Personas.Contrasena' formControlName='Contrasena' class="form-control" id="exampleInputPassword" placeholder="Password">
+         
+         </div>
+         <button type="submit" class="btn btn-primary">registrate</button> 
+         <button type="submit" (click)='regreso()' class="btn btn-primary">iniciar seción </button> 
+     </div>
+     
+     
+    </form>
+    
+
+
+
+
+
+

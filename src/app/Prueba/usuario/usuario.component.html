@@ -1,0 +1,39 @@
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet">    
+                <a class="nav-link">Formulario de registro de usuario</a>
+         
+            <div class="container">		
+                <form class="form__reg"  [formGroup]=' FormUsuario'  (ngSubmit)='CrearUsuario()'>
+                    <div>
+                        <label for="Nombre" >Nombre :</label>
+                        <input type="text" [(ngModel)]='Usuarios.Nombre' formControlName='Nombre'class="form-control" >
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1">Apellido:</label>
+                        <input type="text" [(ngModel)]='Usuarios.Apellido' formControlName='Apellido'class="form-control">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1">Cedula :</label>
+                        <input type="text" [(ngModel)]='Usuarios.Cedula' formControlName='Cedula'class="form-control">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1">Edad :</label>
+                        <input type="text" [(ngModel)]='Usuarios.Edad' formControlName='Edad'class="form-control">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1">Telefono:</label>
+                        <input type="text" [(ngModel)]='Usuarios.Telefono' formControlName='Telefono'class="form-control">
+                    </div>
+                    <div>
+                        <label for="exampleInputEmail1">Dirrección : </label>
+                        <input type="text" [(ngModel)]='Usuarios.Direccion' formControlName='Direccion'class="form-control">
+                    </div>
+                            <!-- agrego botones -->
+                    <div class="btn__form">
+                        <button class="btn__submit" class="btn btn-primary" style="margin-left: 30px ">registro</button>
+                        <button class="btn__reset"class="btn btn-primary" style="margin-left: 30px " >limpiar </button>
+                    </div>
+                </form>
+            </div>
+    
