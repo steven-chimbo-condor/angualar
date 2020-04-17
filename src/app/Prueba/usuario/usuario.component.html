@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row mx-auto">
             <div class="col md-4">
-                <form [formGroup]="FormUsuario" (ngSubmit)="guardaryeliminar">
+                <form [formGroup]="FormUsuario" (ngSubmit)="guardaryeliminar()">
                     <input  [(ngModel)]="Usuarios._id" style="display: none;" formControlName="_id" type="text" class="form-control" >
                     <div>
                     <p>Cedula: 
@@ -27,7 +27,6 @@
                         <select class="form-control" [(ngModel)]="Usuarios.genero" formControlName="genero" >
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
-                            <option value="CH">Chimbo</option>
                         </select>
                    </div>                   
                       <p>
